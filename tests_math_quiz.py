@@ -13,18 +13,27 @@ class TestMathGame(unittest.TestCase):
             self.assertTrue(min_val <= rand_num <= max_val)
 
     def test_function_B(self):
-        # TODO
-        pass
+        user_input = input("Choose Operator into +,-,* : ")
+        self.assertTrue(if user_input = + or user_input = - or user_input = *)
 
     def test_function_C(self):
             test_cases = [
                 (5, 2, '+', '5 + 2', 7),
-                ''' TODO add more test cases here '''
+                (8, 1, '-', '8 - 1', 7),
+                (6, 4, '*', '6 * 4', 24)
             ]
 
             for num1, num2, operator, expected_problem, expected_answer in test_cases:
-                # TODO
-                pass
+                if operator == '+': 
+                    actual_problem = f'{num1} operator {num2}'
+                    actual_answer = num1 + num2
+                elif operator == '-': 
+                    actual_problem = f'{num1} operator {num2}'
+                    actual_answer = num1 - num2
+                else: 
+                    actual_problem = f'{num1} operator {num2}'
+                    actual_answer = num1 * num2
+                self.assertTrue(if actual_problem == expected_problem and actual_answer == expected_answer)
 
 if __name__ == "__main__":
     unittest.main()
